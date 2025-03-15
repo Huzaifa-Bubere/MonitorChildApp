@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "80700788087",
+    "firebase_url": "https://childmonitorapp-4e38c-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "childmonitorapp-4e38c",
+    "storage_bucket": "childmonitorapp-4e38c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:80700788087:android:45b31303e289d09fc42572",
+        "android_client_info": {
+          "package_name": "com.expapps.monitorchildapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBPvoldNTKiAmF5BYC-KGkNkwV8PlSkjY4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

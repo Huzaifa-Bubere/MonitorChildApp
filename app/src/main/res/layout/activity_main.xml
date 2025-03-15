@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:gravity="center"
+        android:background="#F9F9F9">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Child Mode"
+            android:fontFamily="@font/lato_black"
+            android:textSize="16sp"/>
+    </LinearLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/permissionErrorTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Error: Please grant all the permission from settings."
+                android:fontFamily="@font/lato_black"
+                android:textSize="18sp"
+                android:textColor="@color/md_red_700"
+                android:layout_marginHorizontal="12dp"
+                android:layout_marginTop="30dp"
+                android:visibility="gone"/>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="#14B7DB"
+                app:cardUseCompatPadding="true"
+                android:layout_marginHorizontal="12dp"
+                android:layout_marginTop="14dp"
+                app:cardCornerRadius="16sp">
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="18dp"
+                    android:gravity="center_vertical">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginHorizontal="8dp"
+                        android:fontFamily="@font/lato_black"
+                        android:textColor="@color/white"
+                        android:textSize="18sp"
+                        android:text="Your activities are now being recorded"/>
+                    <ImageView
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:src="@drawable/ic_hat_magnifier"
+                        android:layout_marginHorizontal="8dp"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Your MCode is -"
+                android:textStyle="italic"
+                android:fontFamily="@font/lato_black"
+                android:textSize="18sp"
+                android:gravity="center"
+                android:layout_marginTop="20dp"/>
+            <include
+                android:id="@+id/mCodeView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                layout="@layout/layout_otp"
+                android:layout_marginTop="18dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Enter above MCode in your parents device to share your data."
+                android:fontFamily="@font/lato_black"
+                android:textSize="18sp"
+                android:layout_marginHorizontal="12dp"
+                android:layout_marginTop="25dp"/>
+            
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginTop="40dp">
+                <LinearLayout
+                    android:id="@+id/copyTextLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_marginEnd="20dp">
+                    <ImageView
+                        android:layout_width="56dp"
+                        android:layout_height="56dp"
+                        android:src="@drawable/ic_copy"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Copy MCode"
+                        android:fontFamily="@font/lato_bold"
+                        android:textSize="16sp"
+                        android:layout_marginTop="4dp"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/shareMCodeLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_marginStart="20dp">
+                    <ImageView
+                        android:layout_width="56dp"
+                        android:layout_height="56dp"
+                        android:src="@drawable/ic_share"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Share MCode"
+                        android:fontFamily="@font/lato_bold"
+                        android:textSize="16sp"
+                        android:layout_marginTop="4dp"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Note: Do not share above MCode with unknown person."
+                android:fontFamily="@font/lato"
+                android:textSize="18sp"
+                android:textColor="@color/md_red_700"
+                android:layout_marginHorizontal="12dp"
+                android:layout_marginTop="30dp"/>
+
+            <Button
+                android:id="@+id/notifyParentBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginHorizontal="12dp"
+                android:fontFamily="@font/lato_bold"
+                android:text="Emergency (Notify Parent)"
+                android:backgroundTint="@color/md_red_400"/>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>
